@@ -1,0 +1,3 @@
+include ':app'
+include ':SDL2'
+include ':main'
