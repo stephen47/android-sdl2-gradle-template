@@ -137,9 +137,6 @@ task(distributeLib, type : Copy) {
     // trigger build library
     dependsOn assemble
     into '../distribution/SDL2/'
-    from('include/') {
-        into 'include/'
-    }
     from('build/outputs/native/release/lib') {
         into 'lib/'
     }

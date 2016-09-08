@@ -5,7 +5,7 @@ model {
      repositories {
         libs(PrebuiltLibraries) {
             SDL2 {
-                headers.srcDir "${lib_distribution_root}/SDL2/include"
+                headers.srcDir "../SDL2/include"
                 binaries.withType(SharedLibraryBinary) {
                     sharedLibraryFile = file("${lib_distribution_root}/SDL2/lib/${targetPlatform.getName()}/libSDL2.so")
                 }
@@ -25,8 +25,8 @@ model {
         }
         ndk {
             moduleName = 'main'
-            cppFlags.addAll(["-I" + file("${lib_distribution_root}/SDL2/include/").absolutePath])
-            CFlags.addAll(["-I" + file("${lib_distribution_root}/SDL2/include/").absolutePath])
+            cppFlags.addAll(["-I" + file("../SDL2/include/").absolutePath])
+            CFlags.addAll(["-I" + file("../SDL2/include/").absolutePath])
             stl "stlport_static"
         }
 

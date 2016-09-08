@@ -12,7 +12,7 @@ model {
     repositories {
         libs(PrebuiltLibraries) {
             SDL2 {
-                headers.srcDir "${lib_distribution_root}/SDL2/include"
+                headers.srcDir "../SDL2/include"
                 binaries.withType(SharedLibraryBinary) {
                     sharedLibraryFile = file("${lib_distribution_root}/SDL2/lib/${targetPlatform.getName()}/libSDL2.so")
                 }
