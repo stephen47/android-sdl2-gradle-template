@@ -38,7 +38,7 @@ model {
             main {
                 jni {
                     dependencies {
-                        library 'SDL2' linkage 'shared'
+                        //library 'SDL2' linkage 'shared'
                         project ':main' linkage 'shared'
                     }   
                 }   
@@ -84,5 +84,11 @@ model {
             // To include all cpu architectures, leaves abiFilters empty
             create("all")
         }
+    }
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name.contains('compile')) {
+        task.dependsOn ':main:distributeLib'
     }
 }

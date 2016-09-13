@@ -37,7 +37,7 @@ This will compile libSDL2 as a shared library.
 ```
 ./gradlew :main:distributeLib
 ```
-This will compile our little project (source code in main/src/) as a shared library.
+This will compile our little project (source code in main/src/) as a shared library. You can now skip this step and just run assembleDebug as below. What I would suggest is you coompile SDL2 first, commit it to source control, then just build the project as normal.
 
 ```
 ./gradlew assembleDebug
