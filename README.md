@@ -1,3 +1,7 @@
+# This repository is no longer maintained.
+
+This is being left up for reference but be warned it no longer builds on the modern Android toolchain.
+
 # android-sdl2-gradle-template
 
 ## Synopsis
